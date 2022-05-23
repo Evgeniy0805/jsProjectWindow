@@ -90,10 +90,39 @@
 /*!************************!*\
   !*** ./src/js/main.js ***!
   \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ "./src/js/modules/modal.js");
 
+window.addEventListener('DOMContentLoaded', () => {
+  Object(_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])();
+});
+
+/***/ }),
+
+/***/ "./src/js/modules/modal.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/modal.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const modals = () => {
+  function openPopup(trigger, modal) {
+    trigger.addEventListener('click', e => modal.style.display = 'block');
+  }
+
+  const engineerBtn = document.querySelector('.popup_engineer_btn'),
+        engineerPopup = document.querySelector('.popup_engineer');
+  openPopup(engineerBtn, engineerPopup);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (modals);
 
 /***/ })
 
